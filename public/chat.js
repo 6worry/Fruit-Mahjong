@@ -6,15 +6,18 @@ ws.onmessage = function(event) { // 메세지 수신에 대한 호출
         const chat = document.getElementById('chat');
         chat.innerHTML += '<p>' + message.content + '</p>';
     } else if (message.type === 'drawCard') {
+        console.log(message);
         displayCard(message.cardInfo);
     }
 };
 
 function sendMessage() {
     const messageInput = document.getElementById('messageInput');
+    const playernum = document.getElementById('playernum');
     const message = {
         type: 'chat',
-        content: messageInput.value
+        content: messageInput.value,
+        player: playernum.value
     };
 
     ws.send(JSON.stringify(message));

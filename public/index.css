@@ -1,0 +1,83 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+#main {
+    border: 1px solid;
+    text-align: center;
+}
+
+#rule {
+    margin: 10px;
+    top: 0; 
+    left: 800px;
+    position: absolute;
+    border: 1px solid;
+    border-radius: 15px;
+    text-align: center;
+    width: 100px;
+}
+
+.card {
+    border: 1px solid;
+    width: 100px;
+    height: 150px;
+    background-color: lightcoral;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform-origin: center center;
+}
+
+.card-container {
+    position: absolute;
+    display: flex;
+    pointer-events: none;
+}
+
+#top {
+    top: 0; 
+    left: 50%;
+    transform: translateX(-50%) rotate(180deg);
+    display: flex;
+    justify-content: center;
+    height: 150px; 
+    width: 1900px; 
+}
+
+#bottom { 
+    bottom: 0; 
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    height: 150px; 
+    width: 1900px; 
+}
+
+#left { 
+    right: 100%;
+    top: 50%;
+    transform: translateY(-50%) rotate(90deg);
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    height: 150px;
+    width: 910px;
+}
+
+#right { 
+    left: 100%; 
+    top: 50%;
+    transform: translateY(-50%) rotate(270deg);
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    height: 150px; 
+    width: 910px; /* 최대 세로길이*/
+}

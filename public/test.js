@@ -49,11 +49,16 @@ function drawCard() {
 
 function displayCard(cardInfo) {
     printCard(cardInfo);
-
+// cardInfo.turn을 내부 변수에 저장한다.
+    currentTileIndex = cardInfo.turn;
+    playernum = cardInfo.playernum;
     const card = document.createElement('div');
+    const playernumView = document.getElementById('playernum');
     card.className = 'card';
     card.textContent = cardInfo.card;
-
+    playernumView.innerHTML = playernum;
+    console.log(cardInfo);
+    console.log(playernum);
     const containers = ['#bottom', '#right', '#top', '#left'];
     const container = document.querySelector(containers[(cardInfo.turn - 1) % 4]);
     container.appendChild(card);
